@@ -65,7 +65,7 @@ header nav {
   background-color: white;
   padding: 1.25rem;
   opacity: 1;
-  z-index: 999999;
+  z-index: 9999999999999;
 }
 header nav .menu-close button {
   background-color: transparent;
@@ -203,29 +203,32 @@ hr {
   display: inline-block;
     opacity: 1;
     z-index: auto;
-    width: 100%;
-    background-color: transparent;
+    height: 10vh;
+    
   }
   header nav .menu-close {
     display: none;
   }
 
   header nav ul {
-    color:var(--Very-dark-blue);
+    
     position: relative;
     top: 0;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 4rem;
+    gap: 5rem;
     margin-right: 2rem;
-    transform: translateY(50%);
+    transform: translateY(100%);
   }
  
   header nav ul li {
     margin: 0;
+    
  }
-
+header nav ul li a {
+  color: var(--Dark-grayish-blue);
+}
   header .icon-menu button {
     display: none;
   }
@@ -237,6 +240,7 @@ hr {
   .right-side {
     margin-top: 0;
   }
+ 
   .left-side article {
     display: flex;
     justify-content: space-between;
@@ -256,4 +260,6 @@ hr {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+
+ 
 }
