@@ -19,6 +19,7 @@ html {
   font-size: 15px;
 }
 body {
+  position: relative;
   max-width: 1100px;
   margin: auto;
   background-color: var(--Off-white);
@@ -43,12 +44,61 @@ header {
   justify-content: space-between;
   padding: 1.8rem;
 }
-/* header nav {
-    display: none;
- }*/
-header nav a {
-  color: var(--Dark-grayish-blue);
+
+header nav .menu-close {
+  background: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+  right: 1.25rem;
+  top: 1.25rem;
+  z-index: 99999;
+  cursor: pointer;
 }
+
+header nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 80vw;
+  background-color: white;
+  padding: 1.25rem;
+  opacity: 1;
+  z-index: 999999;
+}
+header nav .menu-close button {
+  background-color: transparent;
+  border: none;
+}
+
+header nav ul {
+  position: absolute;
+  top: 10%;
+ 
+}
+header nav ul li {
+  margin: 1.5rem 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+header nav ul li:hover {
+  color:var(--Soft-red);
+}
+header .icon-menu button {
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+header nav {
+  display: none;}
+header .icon-menu:active ~ nav {
+  display: block;
+  box-shadow: -10rem -12px 12px rgba(0, 0, 0, 0.5);
+} 
+
 header nav a:hover {
   color: var(--Soft-red);
 }
@@ -139,13 +189,45 @@ hr {
   color: var(--Soft-red);
 }
 
+
 @media (min-width: 800px) {
   body {
-    max-width: 1200px;
+    max-width: 100vw;
   }
-  header nav ul {
+
+  header  {
     display: flex;
-    gap: 3rem;
+   width: 100vw;
+  }
+ header nav {
+  display: inline-block;
+    opacity: 1;
+    z-index: auto;
+    width: 100%;
+    background-color: transparent;
+  }
+  header nav .menu-close {
+    display: none;
+  }
+
+  header nav ul {
+    color:var(--Very-dark-blue);
+    position: relative;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4rem;
+    margin-right: 2rem;
+    transform: translateY(50%);
+  }
+ 
+  header nav ul li {
+    margin: 0;
+ }
+
+  header .icon-menu button {
+    display: none;
   }
   .middle {
     display: grid;
